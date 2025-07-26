@@ -1,10 +1,4 @@
-# 의료 도메인 - 문서 포맷 효율성 패턴
-
-## 📊 도메인 버전: v1.2.1
-**기반**: neuroclaude v1.2.1 핵심 템플릿
-**성숙도**: MINOR - 프로덕션 검증 완료
-**범위**: 의료기기 규제 문서 (FDA, CE, Health Canada)
-
+# 문서 포맷 효율성 패턴
 ---
 
 ## 🎯 핵심 발견: JSON 포맷의 압도적 효율성
@@ -16,11 +10,6 @@
 | **Excel → JSON** | **0%** | **100%** | **최소** | **최고** |
 | Excel → CSV | 15-20% | 150% | 중간 | 중간 |
 | Excel → MD | 25-30% | 200% | 높음 | 낮음 |
-
-### **검증 데이터**
-- **기간**: 6개월 (neuroclaude v1.0.0 → v1.2.1)
-- **규모**: 159개 테스트케이스, 9개 주요 문서, 다수 Excel 첨부파일
-- **성공률**: 프로덕션 환경에서 100%
 
 ---
 
@@ -53,7 +42,7 @@
 ```
 
 ### 2. **자동 데이터 정제**
-- **빈 컬럼 자동 제거**: 1,602개 빈 "Column_*" 키 자동 식별 및 제거
+- **빈 컬럼 자동 제거**: 빈 "Column_*" 키 자동 식별 및 제거
 - **헤더 행 자동 탐지**: 복잡한 Excel 구조 자동 파싱
 - **데이터 타입 보존**: 숫자, 날짜, 텍스트 형식 원본 그대로 유지
 
@@ -70,7 +59,7 @@ def json_to_api_tool(json_data, tool_mapping):
 
 ---
 
-## 🏥 의료 규제 JSON 표준 구조
+## JSON 표준 구조
 
 ### **테스트케이스 문서**
 ```json
@@ -150,58 +139,6 @@ def json_to_api_tool(json_data, tool_mapping):
 
 ---
 
-## 🔄 타 규제 도메인 적용 가능성
-
-### **금융/핀테크 컴플라이언스**
-```json
-{
-  "regulatory_metadata": {
-    "standard_compliance": ["PCI-DSS", "GDPR", "바젤 III"],
-    "document_type": "Compliance_Test_Cases"
-  },
-  "compliance_structure": {
-    "control_id": "Control_ID",
-    "requirement_text": "Control_Requirement", 
-    "test_procedure": "Test_Procedure",
-    "evidence_required": "Evidence_Type"
-  }
-}
-```
-
-### **항공우주 컴플라이언스**
-```json
-{
-  "regulatory_metadata": {
-    "standard_compliance": ["DO-178C", "DO-254"],
-    "document_type": "Software_Verification_Cases"
-  },
-  "verification_structure": {
-    "objective_id": "Verification_Objective_ID",
-    "requirement_link": "Software_Requirement_ID",
-    "verification_method": "Verification_Method",
-    "coverage_analysis": "Coverage_Data"
-  }
-}
-```
-
-### **자동차 안전**
-```json
-{
-  "regulatory_metadata": {
-    "standard_compliance": ["ISO 26262", "ASPICE"],
-    "document_type": "Safety_Test_Cases"
-  },
-  "safety_structure": {
-    "asil_level": "ASIL_Classification", // A/B/C/D
-    "safety_goal": "Safety_Goal_ID",
-    "test_case_id": "Test_Case_ID",
-    "hazard_link": "Hazard_Analysis_ID"
-  }
-}
-```
-
----
-
 ## ⚠️ 구현 시 고려사항
 
 ### **데이터 품질 관리**
@@ -219,45 +156,3 @@ def json_to_api_tool(json_data, tool_mapping):
 1. **감사 추적**: 변환 과정 로그 보관
 2. **데이터 무결성**: 원본과 변환 결과 검증
 3. **접근 제어**: 민감 정보 처리 시 권한 관리
-
----
-
-## 🎯 도메인 시멘틱 버저닝 평가
-
-### **현재 성숙도: v1.2.1 (MINOR 수준)**
-
-**왜 MINOR인가:**
-- ✅ **하위 호환**: 모든 Excel/Word 규제 문서와 완전 호환
-- ✅ **기능 추가**: JSON 포맷은 추가 옵션, 기존 방식 대체 아님
-- ✅ **크로스 도메인**: 금융, 항공우주, 자동차로 확장 가능
-- ✅ **도구 무관**: TestRail, Jira, Azure DevOps 등 범용 지원
-
-**진화 경로:**
-```
-v1.0.0 → 기본 문서 변환 (CSV/MD)
-v1.1.0 → JSON 포맷 도입
-v1.2.0 → 자동 데이터 정제
-v1.2.1 → 크로스 규제 템플릿 (현재)
-v1.3.0 → 고급 API 통합 패턴 (미래)
-```
-
-### **추가 테일러링 필요 부분**
-
-#### **PATCH 수준 (v1.2.x)**
-- [ ] 국가별 필드 매핑 (FDA vs CE vs Health Canada)
-- [ ] 언어 현지화 템플릿
-- [ ] 도구별 최적화
-
-#### **MINOR 수준 (v1.x.0)**
-- [ ] 실시간 컴플라이언스 체크
-- [ ] 자동 규제 갭 분석
-- [ ] 크로스 표준 매핑 도구
-
-#### **MAJOR 수준 (v2.0.0)** - 미래 고려사항
-- [ ] AI 기반 문서 생성
-- [ ] 규제 변경 영향도 분석
-- [ ] JSON 구조 근본적 변경
-
----
-
-**⚡ 이 패턴을 통해 의료, 금융, 항공우주, 자동차 등 모든 규제 문서 워크플로우에서 0% 데이터 손실과 직접 API 연동을 달성할 수 있습니다.**
