@@ -162,21 +162,3 @@ Claude: 목표 확인 → 접근법 제안 → 사용자 피드백 수용 → �
 이 프로젝트는 [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) 하에 배포됩니다.
 
 **간단히 말해**: 자유롭게 사용하세요. 단지 출처만 밝혀주시면 됩니다! 🎉
-
-## 🙏 감사인사
-
-- **Claude Code 팀**: 훌륭한 도구 제공
-- **오픈소스 커뮤니티**: 지속적인 영감
-- **모든 기여자들**: 프로젝트 발전에 기여
-
-## 📞 연락처
-
-- 🐛 **버그 리포트**: [Issues](https://github.com/yscha88/neuroclaude/issues)
-- 💡 **기능 제안**: [Feature Requests](https://github.com/yscha88/neuroclaude/issues/new?template=feature_request.md)
-- 💬 **일반 논의**: [Discussions](https://github.com/yscha88/neuroclaude/discussions)
-
----
-
-**효과적인 Claude 협업을 위해!** 🚀
-
-_Made with ❤️ for structured collaboration_

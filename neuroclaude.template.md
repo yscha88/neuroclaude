@@ -31,7 +31,7 @@ CLAUDE.md ← 프로젝트 가이드 (수동 참조)
 ```
 프로젝트_루트/
 ├── CLAUDE.md                    # L0: 최상위 허브
-├── ai_docs/
+├── .neuroclaude/
 │   ├── patterns/
 │   │   ├── successful_approaches.md    # 성공 사례
 │   │   ├── lessons_learned.md          # 실패 교훈
@@ -135,7 +135,7 @@ Claude: "이 패턴을 기록할까요?"
   - "모든 로그를 새 형식으로 변경"
   - "전체 API 응답 구조 리팩토링"
   - "용어를 manager에서 coordinator로 통일"
-→ `ai_docs/patterns/work_methodology.md` 참조 (순차 처리 필수)
+→ `.neuroclaude/patterns/work_methodology.md` 참조 (순차 처리 필수)
 
 ### 📋 계획적 작업 감지 신호
 - **명확한 목록**: "다음 N개 파일에서", "[파일1], [파일2], [파일3]에서"
@@ -150,7 +150,7 @@ Claude: "이 패턴을 기록할까요?"
 - **효율성 관련**: "효율화", "최적화", "자동화", "개선 방안"
 - **성능 관련**: "더 빠르게", "배치 처리", "일괄 작업"
 - **복잡성 관련**: "복잡한 시스템", "고도화", "완벽한 자동화"
-→ `ai_docs/patterns/lessons_learned.md` 먼저 확인
+→ `.neuroclaude/patterns/lessons_learned.md` 먼저 확인
 
 ---
 
@@ -194,13 +194,48 @@ Claude: "이 패턴을 기록할까요?"
 ## 🚀 빠른 시작 가이드
 
 ### 1단계: 기본 구조 생성
+
+#### 🪟 Windows Command Prompt (CMD)
+```cmd
+REM 디렉터리 생성
+mkdir .neuroclaude
+mkdir .neuroclaude\patterns
+mkdir .neuroclaude\tools  
+mkdir .neuroclaude\archive
+mkdir .neuroclaude\logs
+
+REM 기본 파일 생성
+echo. > CLAUDE.md
+echo. > .neuroclaude\patterns\successful_approaches.md
+echo. > .neuroclaude\patterns\lessons_learned.md
+echo. > .neuroclaude\patterns\work_methodology.md
+echo. > .neuroclaude\patterns\collaborative_decisions.md
+```
+
+#### 💙 Windows PowerShell
+```powershell
+# 디렉터리 생성
+New-Item -ItemType Directory -Force -Path ".neuroclaude\patterns"
+New-Item -ItemType Directory -Force -Path ".neuroclaude\tools"
+New-Item -ItemType Directory -Force -Path ".neuroclaude\archive" 
+New-Item -ItemType Directory -Force -Path ".neuroclaude\logs"
+
+# 기본 파일 생성
+New-Item -ItemType File -Force -Path "CLAUDE.md"
+New-Item -ItemType File -Force -Path ".neuroclaude\patterns\successful_approaches.md"
+New-Item -ItemType File -Force -Path ".neuroclaude\patterns\lessons_learned.md"
+New-Item -ItemType File -Force -Path ".neuroclaude\patterns\work_methodology.md"
+New-Item -ItemType File -Force -Path ".neuroclaude\patterns\collaborative_decisions.md"
+```
+
+#### 🐧 macOS/Linux/Git Bash
 ```bash
 # 디렉터리 생성
-mkdir -p ai_docs/{patterns,tools,archive,logs}
+mkdir -p .neuroclaude/{patterns,tools,archive,logs}
 
 # 기본 파일 생성
 touch CLAUDE.md
-touch ai_docs/patterns/{successful_approaches,lessons_learned,work_methodology}.md
+touch .neuroclaude/patterns/{successful_approaches,lessons_learned,work_methodology,collaborative_decisions}.md
 ```
 
 ### 2단계: CLAUDE.md 초기 설정

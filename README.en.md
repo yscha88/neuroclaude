@@ -43,11 +43,11 @@ A **document-based knowledge management system** for effective collaboration wit
 ### Step 1: Create Basic Structure
 ```bash
 # In project root
-mkdir -p ai_docs/{patterns,tools,archive,logs}
+mkdir -p .neuroclaude/{patterns,tools,archive,logs}
 
 # Create basic files
 touch CLAUDE.md
-touch ai_docs/patterns/{successful_approaches,lessons_learned,work_methodology,collaborative_decisions}.md
+touch .neuroclaude/patterns/{successful_approaches,lessons_learned,work_methodology,collaborative_decisions}.md
 ```
 
 ### Step 2: Setup CLAUDE.md
