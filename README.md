@@ -1,6 +1,6 @@
 # neuroclaude
 
-[![Version](https://img.shields.io/badge/Version-0.1.0-green.svg)](https://github.com/yscha88/neuroclaude)
+[![Version](https://img.shields.io/badge/Version-0.2.0-green.svg)](https://github.com/yscha88/neuroclaude)
 [![Reality-Based](https://img.shields.io/badge/Reality--Based-Redesign-blue.svg)](#)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)
 
@@ -40,13 +40,13 @@ Claude Code와 효과적으로 협업하기 위한 **문서 기반 지식 관리
 ## 🚀 빠른 시작
 
 ### 1단계: 기본 구조 생성
-```bash
-# 프로젝트 루트에서
-mkdir -p patterns archive
 
-# 기본 파일 생성
-touch CLAUDE.md
-touch patterns/{successful_approaches,lessons_learned}.md
+OS별 명령어는 [neuroclaude.template.md](neuroclaude.template.md#-빠른-시작-가이드)에서 확인하세요.
+
+**간단 버전 (Git Bash/Linux/macOS)**:
+```bash
+mkdir -p patterns archive
+touch CLAUDE.md patterns/{successful_approaches,lessons_learned}.md
 ```
 
 ### 2단계: CLAUDE.md 설정
@@ -141,7 +141,7 @@ Claude: 목표 확인 → 접근법 제안 → 사용자 피드백 수용 → �
 
 ## 📊 프로젝트 현황
 
-- **버전**: v0.1.0 Reality-Based Redesign (2025-07-28)
+- **버전**: v0.2.0 Cross-Platform Support (2025-01-XX)
 - **핵심 기능**: 실증 검증된 협의 프로토콜 시스템
 - **검증된 효과**: 협의 프로토콜 경험 유무가 Claude 판단력을 완전히 바꿈
 - **기술적 특징**: Claude Code 도구 기반 파일 관리 + 패턴 축적
@@ -151,11 +151,70 @@ Claude: 목표 확인 → 접근법 제안 → 사용자 피드백 수용 → �
 
 ## 🏷️ 버전 관리
 
-이 프로젝트는 [시맨틱 버저닝](https://semver.org/)을 따릅니다:
+이 프로젝트는 [시맨틱 버저닝 2.0.0](https://semver.org/)을 따릅니다: `MAJOR.MINOR.PATCH`
 
-- **MAJOR**: 근본적 재설계 (0.x.x)
-- **MINOR**: 기능 추가 (x.y.0)  
-- **PATCH**: 버그 수정 (x.y.z)
+### 📋 버전 업그레이드 기준
+
+| 버전 레벨 | 조건 | 변경 사례 | 영향 범위 |
+|-----------|------|-----------|-----------|
+| **MAJOR** | Breaking Changes<br/>하위 호환성 깨짐 | • 협의 프로토콜 구조 변경<br/>• 파일 구조 근본적 재설계<br/>• API 규격 변경<br/>• 기존 사용법이 동작하지 않는 변경 | 🔴 **High Impact**<br/>사용자 적응 필요 |
+| **MINOR** | Backward Compatible<br/>새로운 기능 추가 | • 새로운 플랫폼 지원 (Windows, Linux 등)<br/>• 추가 도구/패턴 지원<br/>• 새로운 협업 방법론 추가<br/>• 템플릿 기능 확장 | 🟡 **Medium Impact**<br/>기존 사용법 유지 |
+| **PATCH** | Bug Fixes<br/>하위 호환 버그 수정 | • 문서 오타 수정<br/>• 명령어 오류 수정<br/>• 링크 깨짐 수정<br/>• 템플릿 내용 개선 | 🟢 **Low Impact**<br/>투명한 개선 |
+
+### 📊 버전별 변경 사항 분류
+
+#### Added (MINOR +)
+- 새로운 플랫폼 지원 명령어
+- 추가 템플릿 섹션
+- 새로운 패턴 및 사례
+- 확장 기능
+
+#### Changed (MAJOR 주의)
+- 기존 구조 수정
+- 협의 프로토콜 변경  
+- 파일 명명 규칙 변경
+- 핵심 워크플로우 수정
+
+#### Fixed (PATCH)
+- 버그 수정
+- 오타 및 링크 수정
+- 문서 정확성 개선
+- 명령어 오류 수정
+
+#### Removed (MAJOR)
+- 기존 기능 제거
+- 파일 구조 단순화
+- 하위 호환성 중단
+
+### 🎯 Semantic Versioning 예시
+
+```
+0.1.0 → 0.1.1  (문서 오타 수정)
+0.1.1 → 0.2.0  (Windows 지원 추가)  ← 이번 업데이트
+0.2.0 → 0.2.1  (명령어 버그 수정)
+0.2.1 → 1.0.0  (첫 번째 안정 버전)
+1.0.0 → 2.0.0  (협의 프로토콜 구조 변경)
+```
+
+### 📝 CHANGELOG.md 연동
+
+모든 버전 변경 사항은 [CHANGELOG.md](CHANGELOG.md)에 다음 형식으로 기록됩니다:
+
+```markdown
+## [Unreleased]
+### Added
+- 새로운 기능들
+
+## [0.2.0] - 2025-01-XX
+### Added  
+- Windows 플랫폼 지원 (CMD, PowerShell)
+- OS별 빠른 시작 가이드
+
+## [0.1.0] - 2025-07-28
+### Added
+- Reality-Based Redesign 완료
+- 협의 프로토콜 시스템
+```
 
 ## 📄 라이센스
 

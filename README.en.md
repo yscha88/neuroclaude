@@ -1,6 +1,6 @@
 # neuroclaude
 
-[![Version](https://img.shields.io/badge/Version-0.1.0-green.svg)](https://github.com/yscha88/neuroclaude)
+[![Version](https://img.shields.io/badge/Version-0.2.0-green.svg)](https://github.com/yscha88/neuroclaude)
 [![Reality-Based](https://img.shields.io/badge/Reality--Based-Redesign-blue.svg)](#)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)
 
@@ -41,11 +41,12 @@ A **document-based knowledge management system** for effective collaboration wit
 ## 🚀 Quick Start
 
 ### Step 1: Create Basic Structure
-```bash
-# In project root
-mkdir -p .neuroclaude/{patterns,tools,archive,logs}
 
-# Create basic files
+For OS-specific commands, see [neuroclaude.template.md](neuroclaude.template.md#-quick-start-guide).
+
+**Simple version (Git Bash/Linux/macOS)**:
+```bash
+mkdir -p .neuroclaude/{patterns,tools,archive,logs}
 touch CLAUDE.md
 touch .neuroclaude/patterns/{successful_approaches,lessons_learned,work_methodology,collaborative_decisions}.md
 ```
@@ -150,7 +151,7 @@ We welcome your participation in the development of this project!
 
 ## 📊 Project Status
 
-- **Version**: v0.1.0 Reality-Based Redesign (2025-07-28)
+- **Version**: v0.2.0 Cross-Platform Support (2025-01-XX)
 - **Core Function**: Empirically verified negotiation protocol system
 - **Verified Effect**: Negotiation protocol experience completely changes Claude's judgment ability
 - **Technical Features**: Claude Code tool-based file management + pattern accumulation
@@ -160,11 +161,70 @@ We welcome your participation in the development of this project!
 
 ## 🏷️ Version Management
 
-This project follows [Semantic Versioning](https://semver.org/):
+This project follows [Semantic Versioning 2.0.0](https://semver.org/): `MAJOR.MINOR.PATCH`
 
-- **MAJOR**: Fundamental redesign (0.x.x)
-- **MINOR**: Feature addition (x.y.0)  
-- **PATCH**: Bug fixes (x.y.z)
+### 📋 Version Upgrade Criteria
+
+| Version Level | Condition | Change Examples | Impact Scope |
+|---------------|-----------|-----------------|-------------|
+| **MAJOR** | Breaking Changes<br/>Backward incompatibility | • Negotiation protocol structure changes<br/>• Fundamental file structure redesign<br/>• API specification changes<br/>• Changes that break existing usage | 🔴 **High Impact**<br/>User adaptation required |
+| **MINOR** | Backward Compatible<br/>New feature addition | • New platform support (Windows, Linux, etc.)<br/>• Additional tool/pattern support<br/>• New collaboration methodology<br/>• Template feature expansion | 🟡 **Medium Impact**<br/>Existing usage maintained |
+| **PATCH** | Bug Fixes<br/>Backward compatible fixes | • Documentation typo fixes<br/>• Command error corrections<br/>• Broken link fixes<br/>• Template content improvements | 🟢 **Low Impact**<br/>Transparent improvements |
+
+### 📊 Change Classification by Version
+
+#### Added (MINOR +)
+- New platform support commands
+- Additional template sections
+- New patterns and cases
+- Extended features
+
+#### Changed (MAJOR Alert)
+- Existing structure modifications
+- Negotiation protocol changes  
+- File naming convention changes
+- Core workflow modifications
+
+#### Fixed (PATCH)
+- Bug fixes
+- Typos and link fixes
+- Documentation accuracy improvements
+- Command error corrections
+
+#### Removed (MAJOR)
+- Existing feature removal
+- File structure simplification
+- Backward compatibility breaks
+
+### 🎯 Semantic Versioning Examples
+
+```
+0.1.0 → 0.1.1  (Documentation typo fix)
+0.1.1 → 0.2.0  (Windows support added)  ← This update
+0.2.0 → 0.2.1  (Command bug fix)
+0.2.1 → 1.0.0  (First stable version)
+1.0.0 → 2.0.0  (Negotiation protocol structure change)
+```
+
+### 📝 CHANGELOG.md Integration
+
+All version changes are recorded in [CHANGELOG.md](CHANGELOG.md) in the following format:
+
+```markdown
+## [Unreleased]
+### Added
+- New features
+
+## [0.2.0] - 2025-01-XX
+### Added  
+- Windows platform support (CMD, PowerShell)
+- OS-specific quick start guide
+
+## [0.1.0] - 2025-07-28
+### Added
+- Reality-Based Redesign completion
+- Negotiation protocol system
+```
 
 ## 📄 License
 
